@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Page</title>
+    </head>
+    <body>
+        <h1>contact Me</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">Home</a></li>
+                <li><a href="{% url 'contact' %}">Home</a></li>
+            </ul>
+        </nav>
+        <form action="{% url 'welcome' %}" method="post">
+            {% csrf_token %}
+            <label for="name">Name:</label><br>
+            <input type="text" is="name" name="name" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <input type="submit" value="submit">
+        </form>
+    </body>
+</html>
